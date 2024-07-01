@@ -9,7 +9,7 @@ if (isset($_POST['username']) && isset($_POST['id']))
     $result = mysqli_query($conn,$query);
 
     if (mysqli_num_rows($result)>0){
-        echo "User exists";
+        header("location: home.php");
     } else{
         echo "User doesn't exist";
     }
